@@ -4,17 +4,17 @@ A input class for use in LWJGL3 which help easier handle the KeyCallback
 ##Usage:
 
 1. import the InputClass.
-
+```
     import where.you.put.the.class.Input;
-
+```
 
 2. set it to the GLFWKeyCallback
-
+```
     glfwSetKeyCallback(window, keyCallback = new Input());
-
+```
 
 3. Easily check anytime anywhere the input by
-
+```
     // when key is down (including first pressed and repeated)
     if(Input.isKeyDown(GLFW_KEY_SPACE)) {
         System.out.println("space down");
@@ -34,3 +34,4 @@ A input class for use in LWJGL3 which help easier handle the KeyCallback
     if(Input.isKeyReleased(GLFW_KEY_SPACE)) {
         System.out.println("space released");
     }
+```
