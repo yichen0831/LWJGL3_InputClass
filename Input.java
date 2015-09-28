@@ -1,6 +1,22 @@
 import static org.lwjgl.glfw.GLFW.*;
 import org.lwjgl.glfw.GLFWKeyCallback;
 
+/* [LWJGL3_InputClass](https://github.com/yichen0831/LWJGL3_InputClass)
+ *
+ * A input class for use in LWJGL3 which help easier handle the KeyCallback.
+ *
+ * This input class only accepts one checker. That is, the key state is reset to
+ * idle after being checked. Thus, the key input will only be used one time.
+ *
+ * For example, if several objects call Input.isKeyPressed(GLFW_KEY_SPACE),
+ * only the first object who accesses the call will get true, others will get false.
+ *
+ * If you would like to have the key input being checked for several time
+ * during one update loop, you can refer to
+ * [LWJGL3_InputClass2](https://github.com/yichen0831/LWJGL3_InputClass2).
+ *
+*/
+
 public class Input extends GLFWKeyCallback {
 	public enum KeyState {
 		Idle,
